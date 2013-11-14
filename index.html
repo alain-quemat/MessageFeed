@@ -5,6 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
     <link rel="stylesheet" type="text/css" href="topcoat/css/topcoat-mobile-light.css"/>
     <link rel="stylesheet" type="text/css" href="css/styles.css"/>
+
+<script type="text/javascript" charset="utf-8">
+
+    // Wait for device API libraries to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
+
+    // device APIs are available
+    //
+    function onDeviceReady() {
+        alert(device.uuid);
+    }
+
+    </script>
+
+
+
 </head>
 <body>
 

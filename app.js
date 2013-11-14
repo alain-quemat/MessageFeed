@@ -44,6 +44,5 @@ type: "POST"
     $('.camera-btn').on('click', takePicture);
 
     getFeed();
-    getDeviceInfo ();
 
 }());
