@@ -16,16 +16,17 @@
     //
     function onDeviceReady() {
         alert(device.uuid);
-        alert("???");
-        watchID = navigator.geolocation.watchPosition(onSuccess, onError, options);
+        watchID = navigator.geolocation.watchPosition(onSuccess, onError, {enableHighAccuracy:false, timeout:20000,maximumAge:60000});
     }
     function onSuccess(position) {
-            alert('write position');
+            alert('succes write position');
             var element = document.getElementById('geolocation');
             element.innerHTML = 'Latitude: '  + position.coords.latitude      + '<br />' +
                                 'Longitude: ' + position.coords.longitude     + '<br />' +
                                 '<hr />'      + element.innerHTML;
         }
+    function onError() {
+            alert('error write position');}
 </script>
 
 
