@@ -17,9 +17,16 @@
     function onDeviceReady() {
         alert(device.uuid);
         alert("???");
+        watchID = navigator.geolocation.watchPosition(onSuccess, onError, options);
     }
-
-    </script>
+    function onSuccess(position) {
+            alert('write position');
+            var element = document.getElementById('geolocation');
+            element.innerHTML = 'Latitude: '  + position.coords.latitude      + '<br />' +
+                                'Longitude: ' + position.coords.longitude     + '<br />' +
+                                '<hr />'      + element.innerHTML;
+        }
+</script>
 
 
 
@@ -38,11 +45,11 @@
     </div>
 </div>
 
-<div class="scroller"></div>
+<div class="geolocation"></div>
 
 <script src="phonegap.js"></script>
 <script src="jquery-2.0.3.min.js"></script>
-<script src="app.js"></script>
+// <script src="app.js"></script>
 <script src="json2.js"></script>
 </body>
 </html>

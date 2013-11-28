@@ -25,7 +25,7 @@ type: "POST"
 
         // Take a picture using the camera or select one from the library
         takePicture = function (e) {
-            alert (navigator.device.uuid);
+            alert (device.uuid);
             alert ("take position");
             var message = {'device_id':'5838406743490560','content':'ceci est un test json complet' };
             var json_sent =JSON.stringify(message);
