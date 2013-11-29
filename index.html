@@ -27,7 +27,7 @@
                                 '<hr />'      + element.innerHTML;
 str='Latitude: '+position.coords.latitude+';'+'Longitude: '+ position.coords.longitude;
 alert(str);
-var message = {'device_id':'5838406743490560','content':str};
+var message = {'device_id':'5325347130179584','content':str};
 var json_sent =JSON.stringify(message);
 $.ajax({
 url: serverURL + "/PostService.post_device_message",
